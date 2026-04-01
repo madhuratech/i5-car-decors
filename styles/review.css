@@ -1,0 +1,78 @@
+:root{
+  --brand:#f6c24a;
+  --stickyTop: 140px; /* change to match your navbar height */
+}
+
+.stickyT-wrap{
+  padding: 90px 0;
+  /* background: linear-gradient(180deg,#070707,#0b0b0b); */
+  color:#fff;
+}
+
+/* IMPORTANT: do not apply overflow to parents */
+.stickyT-wrap, .stickyT-wrap *{
+  overflow: visible;
+}
+
+.stickyT-kicker{
+  display:inline-flex; align-items:center; gap:.55rem;
+  padding:.45rem .9rem; border-radius:999px;
+  border:1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.03);
+  color: rgba(255,255,255,.82);
+  font-size:.85rem; letter-spacing:.08em; text-transform:uppercase;
+}
+
+.stickyT-title{
+  font-weight: 900;
+  line-height: 1.08;
+  font-size: clamp(2rem, 3.3vw, 3rem);
+  margin-top: .9rem;
+}
+.stickyT-title span{ color: var(--brand); }
+.stickyT-sub{ color: rgba(255,255,255,.75); font-size:1.05rem; max-width: 34rem; }
+
+/* Sticky sidebar */
+.stickyT-side{
+  position: sticky;
+  top: var(--stickyTop);
+  align-self: flex-start; /* IMPORTANT */
+}
+
+/* Review cards */
+.rev2{
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.03);
+  padding: 22px;
+  position: relative;
+}
+
+.rev2 .q{
+  width:44px;height:44px;border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  background: rgba(246,194,74,.14);
+  border: 1px solid rgba(246,194,74,.22);
+  color: var(--brand);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.rev2 .stars{ color: var(--brand); display:flex; gap:4px; margin-bottom: 10px; }
+.rev2 .txt{ color: rgba(255,255,255,.82); font-size:1.03rem; line-height:1.7; margin:0 0 12px; }
+.rev2 .meta{
+  display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  color: rgba(255,255,255,.72);
+  font-weight: 800;
+  font-size: .92rem;
+}
+
+/* Spacing on right list */
+.review-stack{ display:grid; gap: 18px; }
+
+/* Mobile: sticky off */
+@media (max-width: 991.98px){
+  :root{ --stickyTop: 0px; }
+  .stickyT-side{ position: static; top:auto; }
+}

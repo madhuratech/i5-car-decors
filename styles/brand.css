@@ -1,0 +1,117 @@
+
+.brands-sec{
+  padding: 90px 0;
+}
+.brands-kicker{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  font-size: .85rem;
+  color: rgba(255,255,255,.7);
+}
+
+.brands-title{
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  font-weight: 800;
+  color: #fff;
+}
+
+.brands-title span{
+  color: var(--brand, #00e5ff);
+}
+
+.brands-sub{
+  max-width: 720px;
+  margin-inline: auto;
+  color: rgba(255,255,255,.65);
+  font-size: 1rem;
+}
+
+/* ===============================
+   MARQUEE
+================================ */
+
+.brand-marquee{
+  position: relative;
+  overflow: hidden;
+  padding: 70px 0;
+  border-radius: 16px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.1);
+}
+
+.brand-marquee::before,
+.brand-marquee::after{
+  content:"";
+  position:absolute;
+  top:0;
+  width: 90px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.brand-marquee::before{
+  left:0;
+  background: linear-gradient(to right, rgba(0,0,0,.9), transparent);
+}
+.brand-marquee::after{
+  right:0;
+  background: linear-gradient(to left, rgba(0,0,0,.9), transparent);
+}
+
+.brand-track{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: max-content;
+  animation: brandScroll 20s linear infinite;
+}
+
+.brand-marquee:hover .brand-track{
+  animation-play-state: paused;
+}
+
+.brand-item{
+  min-width: 170px;
+  height: 78px;
+  padding: 12px;
+  border-radius: 14px;
+  /* background: rgba(187, 175, 175, 0.05); */
+  background:hsl(210, 5%, 33%);
+  border: 1px solid rgba(255,255,255,.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+
+  transition: all .3s ease;
+}
+
+.brand-item:hover{
+  transform: translateY(-5px);
+  border-color: var(--brand, #00e5ff);
+  box-shadow: 0 0 20px rgba(0,229,255,.35);
+}
+
+.brand-item img{
+  max-height: 52px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Animation */
+@keyframes brandScroll{
+  from{ transform: translateX(0); }
+  to{ transform: translateX(-50%); }
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .brand-track{ animation-duration: 14s; }
+  .brand-item{ min-width: 140px; height: 68px; }
+  .brand-item img{ max-height: 44px; }
+}

@@ -1,0 +1,281 @@
+:root {
+  --brand: #f6c24a;
+  --nav-gap: 24px;
+}
+
+.navbar-transparent {
+  background: transparent !important;
+  padding: 1rem 0;
+}
+
+.navbar .nav-link {
+  color: rgba(255, 255, 255, .9);
+  font-weight: 600;
+}
+
+.navbar .nav-link:hover {
+  color: #fff;
+}
+
+.brand-accent {
+  color: var(--brand);
+}
+
+.navbar .navbar-collapse {
+  justify-content: center !important;
+}
+
+/* Dropdown anchor (desktop) */
+.nav-item.dropdown.position-relative {
+  position: relative;
+}
+
+/* MEGA MENU — desktop */
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  margin-top: 14px;
+  width: 780px;
+  max-width: calc(100vw - 32px);
+  background: rgba(10, 10, 10, .95);
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+  border: 2px solid var(--brand);
+  overflow: hidden;
+  padding: 0;
+}
+
+
+
+.mega-left {
+  padding: 14px !important;
+}
+
+.mega-head {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: .4rem;
+  cursor: pointer;
+}
+
+.mega-head:hover {
+  color: var(--brand);
+}
+
+.mega-links .mega-item {
+  padding: 7px 10px;
+  font-size: .9rem;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, .86);
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+
+.mega-links .mega-item:hover,
+.mega-links .mega-item.active {
+  background: rgba(255, 255, 255, .08);
+  color: var(--brand);
+}
+
+.mega-image {
+  min-height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.mega-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, .6), rgba(0, 0, 0, .2));
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 16px;
+  color: #fff;
+}
+
+/* ✅ MOBILE: remove dropdown completely and make Products act like normal link */
+@media (max-width:991.98px) {
+.navbar .navbar-collapse{
+    background: #000;
+    border-radius: 14px;
+    padding: 12px 14px;
+    margin-top: 10px;
+    border: 1px solid rgba(255,255,255,.10);
+  }
+
+  /* hide mega dropdown menu */
+  .nav-item.dropdown .mega-menu {
+    display: none !important;
+  }
+
+  /* remove dropdown arrow */
+  .nav-item.dropdown .dropdown-toggle::after {
+    display: none !important;
+  }
+
+  /* make it behave like normal nav item */
+  .nav-item.dropdown .dropdown-toggle {
+    pointer-events: auto;
+  }
+}
+
+/* HERO */
+:root {
+  --bg: #000411;
+  --gold: #f6c24a;
+
+  --text: #fff;
+  --muted: rgba(255, 255, 255, .82);
+  --nav-gap: 0px;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* HERO with background image */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--bg);
+
+  /* Set your background image path here */
+  background-image: url("/asset/Hero/bggrp.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Reduced overlay using your bg color (#000411) */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(650px 650px at 50% 30%, rgba(45, 45, 44, 0.9), transparent 85%),
+    linear-gradient(180deg,
+      rgba(0, 4, 17, .55) 0%,
+      rgba(0, 4, 17, .38) 55%,
+      rgba(0, 4, 17, .55) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content .container {
+  padding-top: calc(110px + var(--nav-gap));
+  padding-bottom: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-inner {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  font-size: 13px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .88);
+}
+
+.hero-title {
+  font-weight: 600;
+  font-size: clamp(2.2rem, 4.6vw, 4.2rem);
+  line-height: 1.08;
+  margin: 1rem auto .8rem;
+}
+
+.hero-title span {
+  color: var(--gold);
+  text-shadow: 0 0 26px rgba(246, 194, 74, .16);
+}
+
+.hero-sub {
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 1.05rem;
+  margin: 0 auto;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  display: inline-block;
+  margin: 0 .6rem .12rem;
+  box-shadow: 0 0 14px rgba(246, 194, 74, .30);
+}
+
+.btn-outline-light2 {
+  border: 1px solid rgba(255, 255, 255, .55);
+  color: #000 !important;
+  font-weight: 800;
+  padding: .85rem 1.2rem;
+  border-radius: 14px;
+  background: #f6c24a !important;
+  /* backdrop-filter: blur(10px); */
+}
+
+.btn-outline-light2:hover {
+  border-color: rgba(246, 194, 74, .65);
+  background: rgba(0, 4, 17, .28);
+  color: #fff;
+}
+
+
+
+/* Navbar default: transparent */
+.navbar-transparent {
+  background: transparent !important;
+  padding: 1rem 0;
+  transition: background-color .25s ease, backdrop-filter .25s ease, border-color .25s ease;
+}
+
+/* Navbar after scroll: solid black */
+.navbar.scrolled {
+  background: #000 !important;
+  
+}
+
+/* Mobile */
+@media (max-width: 991.98px) {
+  .hero::before {
+    background:
+      radial-gradient(650px 650px at 50% 30%, rgba(45, 45, 44, 0.9), transparent 10%),
+      linear-gradient(180deg,
+        rgba(0, 4, 17, .55) 0%,
+        rgba(0, 4, 17, .38) 55%,
+        rgba(0, 4, 17, .55) 100%);
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,137 @@
+  :root {
+    --brand: #f6c24a;
+  }
+
+  .sec-dark {
+    /* background: #0b0b0b; */
+    padding: 90px 0;
+    color: #fff;
+  }
+
+  .sec-darker {
+    background: #070707;
+    padding: 90px 0;
+    color: #fff;
+  }
+
+  .kicker {
+    display: inline-block;
+    padding: .4rem .85rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid rgba(255, 255, 255, .10);
+    color: rgba(255, 255, 255, .82);
+    font-size: .85rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .title {
+    font-weight: 900;
+    line-height: 1.1;
+    font-size: clamp(1.9rem, 3.2vw, 2.8rem);
+  }
+
+  .title span {
+    color: var(--brand);
+  }
+
+  .lead2 {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.05rem;
+  }
+
+  .glass-card {
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .10);
+    background: rgba(255, 255, 255, .03);
+  }
+
+  .img-cover {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 991.98px) {
+    .img-cover {
+      height: 320px;
+    }
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .55rem .85rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, .12);
+    background: rgba(255, 255, 255, .03);
+    color: rgba(255, 255, 255, .85);
+    font-weight: 700;
+  }
+
+  .pill i {
+    color: var(--brand);
+  }
+
+  .list-card {
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, .10);
+    background: rgba(255, 255, 255, .03);
+    padding: 18px;
+    height: 100%;
+  }
+
+  .list-card h6 {
+    font-weight: 800;
+    margin-bottom: .75rem;
+  }
+
+  .list-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: rgba(255, 255, 255, .82);
+  }
+
+  .list-card li {
+    margin: .45rem 0;
+  }
+
+  /* Split hero-style section */
+  .split-wrap {
+    border-radius: 22px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .12);
+    background: rgba(255, 255, 255, .02);
+  }
+
+  .split-img {
+    min-height: 420px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media (max-width: 991.98px) {
+    .split-img {
+      min-height: 280px;
+    }
+  }
+
+  /* Small before/after idea cards */
+  .mini {
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, .10);
+    background: rgba(255, 255, 255, .03);
+    padding: 14px 14px;
+  }
+
+  .mini .lbl {
+    color: rgba(255, 255, 255, .65);
+    font-size: .85rem;
+  }
+
+  .mini .val {
+    font-weight: 900;
+  }

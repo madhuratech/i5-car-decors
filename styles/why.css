@@ -1,0 +1,107 @@
+/* WHY CHOOSE US */
+.why-choose{
+  /* background:
+    radial-gradient(700px 300px at 10% 0%, rgba(0,229,255,.08), transparent 55%),
+    radial-gradient(700px 300px at 90% 0%, rgba(255,43,214,.08), transparent 55%),
+    linear-gradient(180deg,#070707,#0b0b0b); */
+  padding: 90px 0;
+  color:#fff;
+}
+
+.why-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  padding:.45rem .9rem;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.03);
+  color: rgba(255,255,255,.82);
+  font-size:.85rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.why-title{
+  font-weight:900;
+  line-height:1.1;
+  font-size: clamp(2rem, 3.4vw, 3rem);
+}
+.why-title span{
+  color: var(--brand);
+}
+
+.why-sub{
+  color: rgba(255,255,255,.75);
+  font-size:1.05rem;
+  max-width:52rem;
+}
+
+/* CARDS */
+.why-card{
+  height:100%;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.03);
+  padding: 26px 22px;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  position: relative;
+  overflow:hidden;
+}
+
+.why-card::before{
+  content:"";
+  position:absolute; inset:-2px;
+  /* background: linear-gradient(135deg, rgba(0,229,255,.35), rgba(255,43,214,.35)); */
+  opacity:0;
+  filter: blur(14px);
+  transition: opacity .3s ease;
+  z-index:0;
+}
+
+.why-card:hover::before{ opacity:1; }
+
+.why-card:hover{
+  transform: translateY(-6px);
+  border-color: rgba(246,194,74,.45);
+}
+
+.why-icon{
+  width:54px; height:54px;
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(246,194,74,.15);
+  color: var(--brand);
+  font-size:1.4rem;
+  margin-bottom:14px;
+  position: relative;
+  z-index:1;
+}
+
+.why-card h5{
+  font-weight:900;
+  margin-bottom:.5rem;
+  position: relative;
+  z-index:1;
+}
+
+.why-card p{
+  color: rgba(255,255,255,.72);
+  margin:0;
+  font-size:.95rem;
+  position: relative;
+  z-index:1;
+}
+
+/* SIMPLE REVEAL */
+.reveal-up{
+  opacity:0;
+  transform: translateY(16px);
+  transition: .6s ease;
+}
+.reveal-up.show{
+  opacity:1;
+  transform: translateY(0);
+}

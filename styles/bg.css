@@ -1,0 +1,40 @@
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid #f6c24a;
+  background: rgba(0, 247, 255, 0.1);
+  color: #f6c24a;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+
+  /* Neon glow */
+  box-shadow:
+    0 0 10px #f6c24a,
+    0 0 20px #b09044,
+    0 0 40px #f6c24a;
+    
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background: #f6c24a;
+  color: #000;
+
+  box-shadow:
+    0 0 15px #f6c24a,
+    0 0 30px #f6c24a,
+    0 0 60px #f6c24a;
+
+  transform: translateY(-4px) scale(1.05);
+}
+
+#scrollToTopBtn:active {
+  transform: scale(0.95);
+}

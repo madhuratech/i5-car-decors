@@ -1,0 +1,200 @@
+ :root{
+    --brand:#f6c24a;
+    --neon1:#f6c24a;
+    --neon2:#ffff;
+    --bg:#070707;
+  }
+
+  .gallery-neon{
+    /* background: radial-gradient(1200px 500px at 20% 10%, rgba(0,229,255,.10), transparent 55%),
+                radial-gradient(1000px 450px at 80% 0%, rgba(255,43,214,.10), transparent 55%),
+                linear-gradient(180deg, #050505 0%, #090909 100%);   */
+    padding: 90px 0;
+    color:#fff;
+    overflow:hidden;
+    position: relative;
+  }
+
+  .gallery-neon::before{
+    content:"";
+    position:absolute; inset:-2px;
+    /* background:
+      radial-gradient(600px 260px at 15% 35%, rgba(0,229,255,.10), transparent 55%),
+      radial-gradient(550px 260px at 85% 35%, rgba(255,43,214,.08), transparent 55%); */
+    pointer-events:none;
+    filter: blur(2px);
+    z-index:0;
+  }
+
+  .gallery-head{
+    position: relative;
+    z-index:1;
+  }
+
+  .gallery-kicker{
+    display:inline-flex;
+    align-items:center;
+    gap:.55rem;
+    padding:.45rem .9rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,.12);
+    background: rgba(255,255,255,.03);
+    color: rgba(255,255,255,.82);
+    font-size:.85rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+
+  .gallery-title{
+    font-weight: 900;
+    line-height: 1.1;
+    font-size: clamp(2rem, 3.4vw, 3rem);
+    margin-top: .9rem;
+  }
+  .gallery-title span{
+    color: #f6c24a;
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* color: transparent; */
+  }
+
+  .gallery-sub{
+    color: rgba(255,255,255,.74);
+    max-width: 52rem;
+    font-size: 1.05rem;
+  }
+
+  /* Neon Card */
+  .neon-card{
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.10);
+    background: rgba(255,255,255,.03);
+    cursor: pointer;
+    transform: translateY(10px);
+  }
+
+  /* Glow border */
+  .neon-card::before{
+    content:"";
+    position:absolute; inset:-2px;
+    background: linear-gradient(135deg, rgba(0,229,255,.55), rgba(255,43,214,.55));
+    opacity: 0;
+    transition: opacity .25s ease;
+    filter: blur(10px);
+    z-index:0;
+  }
+
+  .neon-card:hover::before{ opacity: 1; }
+
+  .neon-img{
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    display:block;
+    transform: scale(1.02);
+    transition: transform .35s ease;
+    position: relative;
+    z-index:1;
+  }
+
+  .neon-card:hover .neon-img{ transform: scale(1.08); }
+
+  /* Overlay */
+  .neon-overlay{
+    position:absolute;
+    inset:0;
+    background: linear-gradient(180deg, rgba(0,0,0,.10) 0%, rgba(0,0,0,.78) 92%);
+    z-index:2;
+    opacity:.95;
+  }
+
+  /* Text */
+  .neon-meta{
+    position:absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 14px;
+    z-index:3;
+  }
+
+  .neon-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:.45rem;
+    padding:.35rem .7rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,.14);
+    background: rgba(0,0,0,.35);
+    backdrop-filter: blur(10px);
+    color: rgba(255,255,255,.88);
+    font-weight: 800;
+    font-size: .78rem;
+  }
+
+.book{
+  background-color:var(--brand);
+  color:black;
+  border: none;
+}
+  .neon-caption{
+    margin-top: .55rem;
+    font-weight: 900;
+    font-size: 1.05rem;
+    line-height: 1.2;
+  }
+  .neon-desc{
+    margin: .2rem 0 0;
+    color: rgba(255,255,255,.72);
+    font-size: .92rem;
+  }
+
+  /* Reveal animation on scroll */
+  .reveal{
+    opacity: 0;
+    transform: translateY(18px) scale(.98);
+    transition: opacity .7s ease, transform .7s ease;
+  }
+  .reveal.show{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  /* Slight stagger feel */
+  .reveal[data-delay="1"]{ transition-delay: .08s; }
+  .reveal[data-delay="2"]{ transition-delay: .16s; }
+  .reveal[data-delay="3"]{ transition-delay: .24s; }
+
+  @media (max-width: 575.98px){
+    .neon-img{ height: 220px; }
+  }
+
+  /* Modal image */
+  .modal-neon .modal-content{
+    background: rgba(10,10,10,.92);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 18px;
+    overflow:hidden;
+  }
+  .modal-neon .btn-close{
+    filter: invert(1);
+    opacity: .85;
+  }
+  .modal-neon .modal-header{
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+  .modal-neon .modal-title{
+    font-weight: 900;
+  }
+  .modal-neon .modal-body img{
+    width: 100%;
+    height: auto;
+    display:block;
+  }
+  .modal-neon .modal-body p{
+    color: rgba(255,255,255,.75);
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
