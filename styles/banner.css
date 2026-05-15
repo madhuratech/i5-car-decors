@@ -32,8 +32,8 @@
       position:absolute;
       inset:-220px;
       background:
-        radial-gradient(650px 650px at 18% 28%, rgba(246,194,74,.22), transparent 60%),
-        radial-gradient(900px 900px at 86% 78%, rgba(246,194,74,.12), transparent 65%),
+        radial-gradient(650px 650px at 18% 28%, rgba(246,194,74,.22), transparent 30%),
+        radial-gradient(900px 900px at 86% 78%, rgba(246,194,74,.12), transparent 35%),
         linear-gradient(180deg, rgba(255,255,255,.04), transparent 40%);
       z-index:0;
     }
