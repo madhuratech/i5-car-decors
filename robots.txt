@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://i5cardecors.com/sitemap.xml
